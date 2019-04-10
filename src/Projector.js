@@ -83,7 +83,7 @@ class Projector {
     return out;
   }
 
-   /**
+  /**
    * Use axonometric projection to transform a 3D Point3 coordinate to a 2D Point coordinate, ignoring the z-axis. If given the coordinates will be set into the object, otherwise a brand new Point object will be created and returned.
    * @method Projector#projectXY
    * @param {Point3} point3 - The Point3 to project from.
