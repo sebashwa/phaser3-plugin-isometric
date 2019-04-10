@@ -83,7 +83,7 @@ class Projector {
     return out;
   }
 
-  /**
+   /**
    * Use axonometric projection to transform a 3D Point3 coordinate to a 2D Point coordinate, ignoring the z-axis. If given the coordinates will be set into the object, otherwise a brand new Point object will be created and returned.
    * @method Projector#projectXY
    * @param {Point3} point3 - The Point3 to project from.
@@ -94,8 +94,9 @@ class Projector {
     out.x = (point3.x - point3.y) * this._transform[0];
     out.y = (point3.x + point3.y) * this._transform[1];
 
-    out.x += this.game.world.width * this.origin.x;
-    out.y += this.game.world.height * this.origin.y;
+     const { width, height } = this.scene.sys.game.config;
+    out.x += width * this.origin.x;
+    out.y += height * this.origin.y;
 
     return out;
   }
@@ -109,8 +110,9 @@ class Projector {
    * @return {Point3} The transformed Point3.
    */
   unproject(point, out = new Point3(), z = 0) {
-    const x = point.x - this.game.world.x - (this.game.world.width * this.origin.x);
-    const y = point.y - this.game.world.y - (this.game.world.height * this.origin.y) + z;
+    const { width, height } = this.scene.sys.game.config;
+    const x = point.x - this.scene.cameras.main.x - (width * this.origin.x) + this.scene.cameras.main.scrollX;
+    const y = point.y - this.scene.cameras.main.y - (height * this.origin.y) + z + this.scene.cameras.main.scrollY;
 
     out.x = x / (2 * this._transform[0]) + y / (2 * this._transform[1]);
     out.y = -(x / (2 * this._transform[0])) + y / (2 * this._transform[1]);
