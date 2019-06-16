@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import Body from './Body';
 import Point3 from '../Point3';
 import Cube from '../Cube';

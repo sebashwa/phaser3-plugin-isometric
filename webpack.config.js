@@ -3,6 +3,9 @@ module.exports = {
   entry: [
     './src/IsoPlugin.js'
   ],
+  externals: {
+    phaser: 'phaser',
+  },
   module: {
     rules: [
       {

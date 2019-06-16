@@ -31,5 +31,8 @@
     "type": "git",
     "url": "https://github.com/sebashwa/phaser-plugin-isometric.git"
   },
-  "main": "dist/phaser-plugin-isometric.js"
+  "main": "dist/phaser-plugin-isometric.js",
+  "dependencies": {
+    "phaser": "^3.17.0"
+  }
 }
