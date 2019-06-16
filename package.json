@@ -1,9 +1,9 @@
 {
   "name": "phaser3-plugin-isometric",
   "description": "Feature-packed axonometric plugin for Phaser 3 which stays true to the Phaser API.",
-  "contributors": {
-    "email": "sebashwa@mailbox.org"
-  },
+  "contributors": [
+    "sebashwa@mailbox.org"
+  ],
   "keywords": [
     "phaser",
     "phaser3",
