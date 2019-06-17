@@ -6,6 +6,9 @@
   "repository": "https://sebashwa.github.io/phaser3-plugin-isometric",
   "author": "sebashwa",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
