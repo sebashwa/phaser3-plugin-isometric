@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   mode: 'development',
   entry: [
@@ -21,7 +23,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: 'phaser-plugin-isometric.js',
     library: 'phaser-plugin-isometric',
