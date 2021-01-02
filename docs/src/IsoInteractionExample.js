@@ -12,7 +12,7 @@ class IsoInteractionExample extends Scene {
   }
 
   preload() {
-    this.load.image('tile', '../dist/assets/tile.png');
+    this.load.image('tile', '/assets/tile.png');
     this.load.scenePlugin({
       key: 'IsoPlugin',
       url: IsoPlugin,

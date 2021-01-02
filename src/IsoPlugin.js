@@ -28,6 +28,7 @@
  * @license      {@link http://opensource.org/licenses/MIT|MIT License}
  */
 
+import Phaser from 'phaser';
 import Projector from './Projector';
 import IsoSprite from './IsoSprite';
 export { default as IsoPhysics } from './physics/IsoPhysics';
