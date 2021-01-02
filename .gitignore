@@ -2,6 +2,9 @@
 /dist
 /tmp
 /out-tsc
+/docs/dist
+/docs/tmp
+/docs/out-tsc
 
 # Compiled source #
 ###################

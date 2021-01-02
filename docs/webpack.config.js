@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
@@ -19,12 +20,11 @@ module.exports = {
           ]
         }
       },
-      { test: [/\.vert$/, /\.frag$/], use: 'raw-loader' }
     ]
   },
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/phaser3-plugin-isometric/dist',
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[name].bundle.js'
   },
   plugins: [
@@ -34,8 +34,10 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: __dirname,
-    publicPath: '/dist'
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    port: 9000,
+    publicPath: '/dist/',
   },
   optimization: {
     splitChunks: {
@@ -47,8 +49,7 @@ module.exports = {
           minSize: 0
         }
       }
-    },
-    occurrenceOrder: true 
+    }
   }
 };
 

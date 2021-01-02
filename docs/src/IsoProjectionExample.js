@@ -10,7 +10,7 @@ class IsoProjectionExample extends Scene {
   }
 
   preload() {
-    this.load.image('cube', '../dist/assets/cube.png');
+    this.load.image('cube', '/assets/cube.png');
     this.load.scenePlugin({
       key: 'IsoPlugin',
       url: IsoPlugin,

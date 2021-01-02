@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  font-family: "Lucida Console", Monaco, monospace;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a, a:active {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
